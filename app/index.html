@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="shopcar" id="app">
+		<div class="shopcar-table" id="shopcar_table">
+		    <table>
+		    	<thead>
+		    	    <tr>
+		    	    	<th><input @click="selectedAll" v-model="checked" type="checkbox" class='check-one check' id="checkall" name=""><label for="checkall">全选</label></th>
+		    	    	<th>商品</th>
+		    	    	<th>单价</th>
+		    	    	<th>数量</th>
+		    	    	<th>小计</th>
+		    	    	<th>操作</th>
+		    	    </tr>
+		    	</thead>
+		    	<tbody>
+		    	   <p>{{ checked }}</p>
+		    	    <tr v-for="item in produntList">
+		    	    	<td class="check">
+		    	    	    <input @click = "selectedProdunt(item)" type="checkbox" class="check-one check" v-model="item.checked">
+		    	    	</td>
+		    	    	<td class="goods"> 
+		    	    	        <img v-bind:src="item.productImage"  alt="">
+		    	                <span>{{ item.productName }}</span> 
+		    	    	</td>
+		    	    	<td class="price"><p>{{ item.productPrice | addMoney }}</p></td>
+		    	    	<td class="number">
+		    	    	    <span class="reduce" v-on:click="reduceProductQ(item)">－</span><input v-model="item.productQuentity" type="text" class="goods_num" value=1><span v-on:click="addProductQ(item)" class="add">＋</span>
+		    	    	</td>
+		    	    	<td class="count">
+		    	    	    <p class="color">{{ item.productPrice*item.productQuentity | money}}</p>
+		    	    	</td>
+		    	    	<td class="handle">
+		    	    	    <span @click="deleteP(item)" class="delete-one">删除</span>
+		    	    	</td>
+		    	    </tr>
+		    	</tbody>
+		    </table>
+		</div>
+		<div class="shop-pay">
+		    <div class="shopcar-pay-img" id="shopcar-pay-img">
+		        <span class="icon"><i></i></span>
+		        <div class="img">
+		            <img src="images/1.jpg" alt="">
+		            <span class="cancel-change">取消选择</span>
+		        </div>
+		    </div>
+		    <div class="shopcar-pay-bar">
+		        <input @click="selectedAll" v-model="checked" type="checkbox" class="check-one check" id="checkall-bottom">
+		        <span>全选</span>
+		        <span @click="deleteAll()" class="delete delete-one" id="delete">删除</span>
+		        <span class="already-change-goods">已选商品</span>
+		        <i id="goods_count_num">{{ totalQ }}</i>
+		        <span>件</span>
+		        <span class="button-hide">>></span>
+		        <span class="count_price">{{ "合计"+ totalMoney +"元"}}</span>
+		        <em id="pirce_count"></em>
+		        <button>结算</button>
+		    </div>
+	    </div>
+	</div>
+	<script type = 'text/javascript' src='js/vue.min.js'></script>
+	<script type = 'text/javascript' src='js/vue-resource.min.js'></script>
+	<script type = 'text/javascript' src='js/main.js'></script>
+
+</body>
+</html>

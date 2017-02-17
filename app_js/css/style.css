@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 100%;
+}
+.shopcar {
+  width: 80%;
+  margin: 20px auto;
+}
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 100%;
+}
+table th,
+table td {
+  border: 1px solid #ddd;
+  text-align: center;
+}
+table th {
+  height: 30px;
+  background-color: #aaa;
+  border-top: 3px solid #ddd;
+}
+tr:hover {
+  background-color: #eee;
+}
+.goods img {
+  width: 30%;
+  height: 120px;
+  margin: 5px 0 5px 5%;
+  float: left;
+  border: 1px solid #eee;
+}
+.goods span {
+  width: 55%;
+  float: left;
+  margin-left: 1%;
+  margin-top: 50px;
+}
+.number input {
+  width: 50px;
+  height: 16px;
+  line-height: 16px;
+  padding: 6px 0 2px 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+.number span {
+  display: inline-block;
+  height: 23px;
+  line-height: 23px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+.number span:hover {
+  background-color: #fff;
+  border: 1px solid #900;
+  color: #900;
+}
+.number .reduce {
+  z-index: 2;
+}
+.number .add {
+  z-index: 3;
+}
+.count p {
+  color: #900;
+  font-size: 1.15rem;
+}
+.handle span:hover {
+  color: #900;
+  text-decoration: underline;
+}
+.shop-pay {
+  position: relative;
+  height: 50px;
+  margin-top: 5px;
+}
+/*
+.shop-pay:hover .shopcar-pay-img{
+	display: block;
+}
+*/
+.shopcar-pay-img {
+  display: none;
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  border: 1px solid #ddd;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  z-index: 9999;
+  background-color: #fff;
+}
+.shopcar-pay-img .img {
+  width: 100px;
+  height: 80px;
+  border: 1px solid #edd;
+  margin: 20px 0 0 15px;
+  position: relative;
+}
+.shopcar-pay-img img {
+  width: 100px;
+  height: 80px;
+}
+.shopcar-pay-img .img:hover .cancel-change {
+  display: inline-block;
+}
+.cancel-change {
+  display: none;
+  height: 16px;
+  line-height: 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #900;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+}
+.shopcar-pay-bar {
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px;
+  border: 2px solid #ddd;
+  color: #666;
+}
+.shopcar-pay-bar span {
+  display: inline-block;
+}
+.shopcar-pay-bar .delete {
+  margin-left: 20px;
+}
+.shopcar-pay-bar .delete:hover {
+  color: #900;
+}
+.shopcar-pay-bar input,
+.shopcar-pay-bar .already-change-goods,
+.shopcar-pay-bar .button-hide,
+.shopcar-pay-bar .count_price {
+  margin-left: 30px;
+}
+.shopcar-pay-bar button {
+  display: inline-block;
+  margin-left: 50px;
+}
+#goods_count_num,
+#pirce_count {
+  color: #900;
+}

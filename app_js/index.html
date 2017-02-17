@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script type = 'text/javascript' src='js/main.js'></script>
+</head>
+<body>
+	<div class="shopcar">
+		<div class="shopcar-table" id="shopcar_table">
+		    <table>
+		    	<thead>
+		    	    <tr>
+		    	    	<th><input type="checkbox" class='check-one check' id="checkall" name=""><label for="checkall">全选</label></th>
+		    	    	<th>商品</th>
+		    	    	<th>单价</th>
+		    	    	<th>数量</th>
+		    	    	<th>小计</th>
+		    	    	<th>操作</th>
+		    	    </tr>
+		    	</thead>
+		    	<tbody>
+		    	    <tr>
+		    	    	<td class="check">
+		    	    	    <input type="checkbox" class="check-one check">
+		    	    	</td>
+		    	    	<td class="goods"> 
+		    	    	        <img src="images/2.jpg" alt="">		    	    	    			  	    <span>Casio/卡西欧 EX-TR350</span> 
+		    	    	</td>
+		    	    	<td class="price"><p>229.88</p></td>
+		    	    	<td class="number">
+		    	    	    <span class="reduce">－</span><input type="text" class="goods_num" value=1><span class="add">＋</span>
+		    	    	</td>
+		    	    	<td class="count">
+		    	    	    <p class="color">229.88</p>
+		    	    	</td>
+		    	    	<td class="handle">
+		    	    	    <span class="delete-one">删除</span>
+		    	    	</td>
+		    	    </tr>
+		    	    <tr>
+		    	    	<td class="check">
+		    	    	    <input type="checkbox" class="check-one check">
+		    	    	</td>
+		    	    	<td class="goods"> 
+		    	    	        <img src="images/3.jpg" alt="">		    	    	    			  	    <span>Casio/卡西欧 EX-TR350</span> 
+		    	    	</td>
+		    	    	<td class="price"><p>5666.3</p></td>
+		    	    	<td class="number">
+		    	    	    <span class="reduce">－</span><input type="text" class="goods_num" value=1><span class="add">＋</span>
+		    	    	</td>
+		    	    	<td class="count">
+		    	    	    <p class="color">5666.3</p>
+		    	    	</td>
+		    	    	<td class="handle">
+		    	    	    <span class="delete-one">删除</span>
+		    	    	</td>
+		    	    </tr>
+		    	    <tr>
+		    	    	<td class="check">
+		    	    	    <input type="checkbox" class="check-one check">
+		    	    	</td>
+		    	    	<td class="goods"> 
+		    	    	        <img src="images/4.jpg" alt="">		    	    	    			  	    <span>Casio/卡西欧 EX-TR350</span> 
+		    	    	</td>
+		    	    	<td class="price"><p>2365.88</p></td>
+		    	    	<td class="number">
+		    	    	    <span class="reduce">－</span><input type="text" class="goods_num" value=1><span class="add">＋</span>
+		    	    	</td>
+		    	    	<td class="count">
+		    	    	    <p class="color">2365.88</p>
+		    	    	</td>
+		    	    	<td class="handle">
+		    	    	    <span class="delete-one">删除</span>
+		    	    	</td>
+		    	    </tr>
+	   	    	    <tr>
+		    	    	<td class="check">
+		    	    	    <input type="checkbox" class="check-one check">
+		    	    	</td>
+		    	    	<td class="goods"> 
+		    	    	        <img src="images/1.jpg" alt="">		    	    	    			  	    <span>Casio/卡西欧 EX-TR350</span> 
+		    	    	</td>
+		    	    	<td class="price"><p>5999.88</p></td>
+		    	    	<td class="number">
+		    	    	    <span class="reduce">－</span><input type="text" class="goods_num" value=1><span class="add">＋</span>
+		    	    	</td>
+		    	    	<td class="count">
+		    	    	    <p class="color">5999.88</p>
+		    	    	</td>
+		    	    	<td class="handle">
+		    	    	    <span class="delete-one">删除</span>
+		    	    	</td>
+		    	    </tr>
+
+		    	</tbody>
+		    </table>
+		</div>
+		<div class="shop-pay">
+		    <div class="shopcar-pay-img" id="shopcar-pay-img">
+		        <span class="icon"><i></i></span>
+		        <div class="img">
+		            <img src="images/1.jpg" alt="">
+		            <span class="cancel-change">取消选择</span>
+		        </div>
+		    </div>
+		    <div class="shopcar-pay-bar">
+		        <input type="checkbox" class="check-one check" id="checkall-bottom">
+		        <span>全选</span>
+		        <span class="delete delete-one" id="delete">删除</span>
+		        <span class="already-change-goods">已选商品</span>
+		        <i id="goods_count_num"></i>
+		        <span>件</span>
+		        <span class="button-hide">>></span>
+		        <span class="count_price">合计: ￥</span>
+		        <em id="pirce_count"></em>
+		        <button>结算</button>
+		    </div>
+	    </div>
+	</div>
+</body>
+</html>
